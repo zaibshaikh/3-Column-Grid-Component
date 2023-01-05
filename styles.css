@@ -9,6 +9,7 @@ body {
   color: hsl(0, 0%, 95%);
   letter-spacing: 0.1rem;
   display: grid;
+  overflow: hidden;
   place-content: center;
 }
 
