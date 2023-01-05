@@ -1,53 +1,105 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
 
-:root {
-  --Brightorange: hsl(31, 77%, 52%);
-  --Darkcyan: hsl(184, 100%, 22%);
-  --Verydarkcyan: hsl(179, 100%, 13%);
-  --Transparentwhiteparagraphs: hsla(0, 0%, 100%, 0.75);
-  --Verylightgraybackgroundheadingsbuttons: hsl(0, 0%, 95%);
-  --FFBigShoulders: "Big Shoulders Display", cursive;
-  --FFLexend: "Lexend Deca", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  max-width: 1440px;
-  margin: auto;
-  background-color: var(--Verylightgraybackgroundheadingsbuttons);
-}
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 
 body {
-  height: 100vh;
-  padding: 0;
-  height: 100vh;
+  background-color: hsl(0, 0%, 95%);
+  font-size: 16px;
+  font-family: Lexend Deca, sans-serif;
+  color: hsl(0, 0%, 95%);
+  letter-spacing: 0.1rem;
   display: grid;
-  place-items: center;
+  place-content: center;
 }
 
-.card-container {
-  width: 920px;
-  height: 500px;
-  display: flex;
-  overflow: hidden;
-  flex-direction: row;
+.main {
+  margin: 1rem;
   border-radius: 0.5rem;
-  background-color: var(--Brightorange);
+  overflow: hidden;
 }
 
-.darkgreencard {
-  background-color: var(--Verydarkcyan);
+section {
+  padding: 3rem;
+}
+
+.section1 {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.section2 {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.section3 {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: Big Shoulders Display;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.paragraph {
+  font-family: Lexend Deca, sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background-color: hsl(0, 0%, 95%);
+  border: 0.2rem solid white;
+
+  border: 0;
+  border-radius: 2rem;
+  height: 3rem;
+  width: 10rem;
+  font-size: 0.9rem;
+  font-family: Lexend Deca, sans-serif;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: hsl(0, 0%, 95%, 0);
+  color: white;
+  transition: background-color, 0.5s ease;
+  border: 0.2rem solid white;
+}
+
+.section1 > button {
+  color: hsl(31, 77%, 52%);
+}
+
+.section2 > button {
+  color: hsl(184, 100%, 22%);
+}
+
+.section3 > button {
+  color: hsl(179, 100%, 13%);
 }
 
 .footer-text {
-  font-family: var(--FFLexend);
-  color: var(--Darkcyan);
-  font-size: 1rem;
-  text-align: center;
-  position: absolute;
-  bottom: 1rem;
   width: 100%;
-  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 0;
+  color: black;
+}
+
+@media (min-width: 375px) {
+  body {
+    height: 100vh;
+  }
+  .main {
+    max-width: 1050px;
+    display: flex;
+    flex-direction: row;
+  }
+  .button {
+    margin-top: 5rem;
+  }
 }
